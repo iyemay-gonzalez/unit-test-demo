@@ -27,7 +27,7 @@ const LoginForm: React.FC<LoginFormComponent> = (
 						<div className="form-group">
 							<label htmlFor="exampleInputName">Usuario</label>
 							<input type="name" className="form-control" value={formValues.userName} id="exampleInputName"
-							       onChange={handleChange}/>
+							       onChange={handleChange} data-testid="userName"/>
 						</div>
 					</InputContainer>
 					<InputContainer>
