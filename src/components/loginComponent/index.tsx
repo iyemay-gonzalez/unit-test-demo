@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useState } from "react";
 import LoginFormComponent from "./loginForm.component";
 import { LoginFormValues } from "./loginForm.types";
-import {doLogin} from "../../request/loginRequest";
+import LoginRequest from "../../request/loginRequest";
 
 const LoginForm: React.FC = () => {
 	const [state, setState] = useState<LoginFormValues>({
@@ -21,7 +21,7 @@ const LoginForm: React.FC = () => {
 	
 	const handleSubmit = (event: ChangeEvent<HTMLFormElement>): void => {
 		event.preventDefault();
-		doLogin(state);
+		LoginRequest(state.userName, state.userPassword);
 	};
 	
 	return (

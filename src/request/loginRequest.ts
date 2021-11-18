@@ -1,21 +1,15 @@
-import { LoginFormValues } from '../components/loginComponent/loginForm.types';
-
-export const request = async (): Promise<any> => {
+export default async (userName: string, userPassword: string): Promise<any> => {
 	const response = await fetch('https://reqres.in/api/login', {
 		method: 'POST',
 		body: JSON.stringify({
-			email: "eve.holt@reqres.in",
-			password: "cityslicka"
+			email: userName,
+			password: userPassword,
 		}),
 		headers:{
 			'Content-Type': 'application/json'
 		}
 	})
-	console.log(response);
+	const data = await response.json();
+	return data;
 }
-export const doLogin = (state: LoginFormValues): void => {
-	request();
-}
-// import { request } from './fetchLogin'
-// jest.mock(request)
-// test('') { }
+

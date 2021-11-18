@@ -1,32 +1,36 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, {ChangeEvent, useContext, useEffect, useState} from 'react';
 import InUseForm, {
 	InUseFormReturn,
-	TyValues,
 } from './useForm.types';
+import { LoginFormValues } from "../../components/loginComponent/loginForm.types";
+
 
 const useForm = ({
      initialValues,
      onSubmit,
  }: InUseForm): InUseFormReturn => {
-	const [formValues, setFormValues] = useState<TyValues>(initialValues);
+	const [state, setState] = useState<LoginFormValues>({
+		userName: initialValues.userName,
+		userPassword: initialValues.userPassword,
+	});
 	
-	const handleChange = (
-		event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
-	): void => {
+	const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>): void => {
 		const { target } = event;
 		const name = target.name;
 		const value = target.value;
-		setFormValues({
+		setState(prevState => ({
+			...prevState,
 			[name]: value
-		})
+		}));
 	};
 	
-	const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>): void => {
-	
+	const handleSubmit = (event: ChangeEvent<HTMLFormElement>): void => {
+		event.preventDefault();
+		onSubmit(state);
 	};
 	
 	return {
-		formValues,
+		formValues: state,
 		handleChange,
 		handleSubmit,
 	};

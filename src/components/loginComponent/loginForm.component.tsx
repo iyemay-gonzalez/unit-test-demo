@@ -20,7 +20,7 @@ const LoginForm: React.FC<LoginFormComponent> = (
 		<Container>
 			<FormContainer>
 				<TitleContainer>
-					<h1 className="card-title">Demo Pruebas Unitarias</h1>
+					<h1 className="card-title">Pruebas Unitarias</h1>
 				</TitleContainer>
 				<form onSubmit={handleSubmit}>
 					<InputContainer>
@@ -39,7 +39,7 @@ const LoginForm: React.FC<LoginFormComponent> = (
 						</div>
 					</InputContainer>
 					<ButtonContainer>
-						<button type="submit" className="btn btn-primary">Iniciar Sesión</button>
+						<button type="submit" className="btn btn-primary" data-testid="buttonUser">Iniciar Sesión</button>
 					</ButtonContainer>
 				</form>
 			</FormContainer>

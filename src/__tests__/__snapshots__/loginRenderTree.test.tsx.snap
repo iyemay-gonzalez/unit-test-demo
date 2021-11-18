@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with no pets 1`] = `
+<div
+  className="sc-bdvvtL lbtdOu"
+>
+  <div
+    className="sc-gsDKAQ hFhazj"
+  >
+    <div
+      className="sc-dkPtRN kUjrfe"
+    >
+      <h1
+        className="card-title"
+      >
+        Pruebas Unitarias
+      </h1>
+    </div>
+    <form
+      onSubmit={[Function]}
+    >
+      <div
+        className="sc-hKwDye dlqTEB"
+      >
+        <div
+          className="form-group"
+        >
+          <label
+            htmlFor="exampleInputName"
+          >
+            Usuario
+          </label>
+          <input
+            className="form-control"
+            data-testid="userName"
+            id="exampleInputName"
+            name="userName"
+            onChange={[Function]}
+            type="name"
+            value="Shaun Mante"
+          />
+        </div>
+      </div>
+      <div
+        className="sc-hKwDye dlqTEB"
+      >
+        <div
+          className="form-group"
+        >
+          <label
+            htmlFor="exampleInputPassword"
+          >
+            Contraseña
+          </label>
+          <input
+            className="form-control"
+            data-testid="userPass"
+            id="exampleInputPassword"
+            name="userPassword"
+            onChange={[Function]}
+            type="password"
+            value="Pass123@-%@2"
+          />
+        </div>
+      </div>
+      <div
+        className="sc-eCImPb ewExDR"
+      >
+        <button
+          className="btn btn-primary"
+          data-testid="buttonUser"
+          type="submit"
+        >
+          Iniciar Sesión
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;

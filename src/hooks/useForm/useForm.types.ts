@@ -1,12 +1,12 @@
-export type TyValues = Record<string, string>;
+import { LoginFormValues } from "../../components/loginComponent/loginForm.types";
 
 interface InUseForm {
-	initialValues: TyValues;
+	initialValues: LoginFormValues;
 	onSubmit: Function;
 }
 
 export interface InUseFormReturn {
-	formValues: TyValues;
+	formValues: LoginFormValues;
 	handleChange: (
 		event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
 	) => void;
