@@ -1,6 +1,7 @@
 import {ChangeEvent} from "react";
 
 export interface LoginFormValues {
+	[key: string]: string | boolean | undefined;
 	userName?: string;
 	userPassword?: string;
 }

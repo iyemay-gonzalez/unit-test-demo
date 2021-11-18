@@ -34,8 +34,7 @@ const LoginForm: React.FC<LoginFormComponent> = (
 						<div className="form-group">
 							<label htmlFor="exampleInputPassword">Contraseña</label>
 							<input type="password" className="form-control" value={formValues.userPassword} id="exampleInputPassword"
-							       onChange={handleChange}
-							/>
+							       onChange={handleChange} data-testid="userPass"/>
 						</div>
 					</InputContainer>
 					<ButtonContainer>
