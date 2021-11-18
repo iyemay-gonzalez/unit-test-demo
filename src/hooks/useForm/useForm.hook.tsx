@@ -21,7 +21,7 @@ const useForm = ({
 		})
 	};
 	
-	const handleSubmit = (event: React.ChangeEvent<HTMLButtonElement>): void => {
+	const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>): void => {
 	
 	};
 	

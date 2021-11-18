@@ -9,7 +9,7 @@ export interface LoginFormValues {
 export interface LoginFormComponent {
 	formValues: LoginFormValues;
 	handleSubmit: (
-		event: ChangeEvent<HTMLButtonElement>,
+		event: ChangeEvent<HTMLFormElement>,
 	) => void;
 	handleChange: (
 		event: ChangeEvent<HTMLInputElement | HTMLSelectElement>,

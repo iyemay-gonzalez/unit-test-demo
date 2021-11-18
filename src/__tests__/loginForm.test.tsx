@@ -50,31 +50,24 @@ render(
 	/>,
 );
 
-test("the form has the correct masks in its name inputs", () => {
+test("the form has the correct masks in its inputs", () => {
 
 	const userNameInput = screen.getByTestId("userName");
 	const userNameCast = userNameInput as HTMLInputElement;
 	expect(userNameCast.value).toMatch(/^[a-zA-ZÀ-ú ,.'-]+$/);
-});
-
-
-/** test("the form does not accepts incorrect masks in your name entries", () => {
-	const userNameInput = screen.getByTestId("userName");
-	const userNameCast = userNameInput as HTMLInputElement;
-	expect(userNameCast.value).not.toBe(/^\(?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/)
-});
-
-
-test("the form has the correct masks on its inputs password", () => {
+	
+	const userName = screen.getByTestId("userName");
+	const userNameCastInput = userName as HTMLInputElement;
+	expect(userNameCastInput.value).not.toBe(/^\(?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/);
+	
 	const userPassInput = screen.getByTestId("userPass");
 	const userPassCast = userPassInput as HTMLInputElement;
 	expect(userPassCast.value).toMatch(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/);
-});
-
-test("the form does not accepts the correct masks in your input password", () => {
-	const userPassInput = screen.getByTestId("userPass");
-	const userPassCast = userPassInput as HTMLInputElement;
+	
+	const userPass = screen.getByTestId("userPass");
+	const userPassCastInput = userPass as HTMLInputElement;
 	expect(userPassCast.value).not.toBe(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/);
 });
-**/
+
+
 

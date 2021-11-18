@@ -11,7 +11,7 @@ export interface InUseFormReturn {
 		event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
 	) => void;
 	handleSubmit: (
-		event: React.ChangeEvent<HTMLButtonElement>
+		event: React.ChangeEvent<HTMLFormElement>
 	) => void;
 }
 

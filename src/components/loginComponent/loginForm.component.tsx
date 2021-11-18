@@ -22,23 +22,24 @@ const LoginForm: React.FC<LoginFormComponent> = (
 				<TitleContainer>
 					<h1 className="card-title">Demo Pruebas Unitarias</h1>
 				</TitleContainer>
-				<form>
+				<form onSubmit={handleSubmit}>
 					<InputContainer>
 						<div className="form-group">
 							<label htmlFor="exampleInputName">Usuario</label>
-							<input type="name" className="form-control" value={formValues.userName} id="exampleInputName"
-							       onChange={handleChange} data-testid="userName"/>
+							<input type="name" className="form-control" name="userName" value={formValues.userName}
+							       id="exampleInputName" onChange={handleChange} data-testid="userName"/>
 						</div>
 					</InputContainer>
 					<InputContainer>
 						<div className="form-group">
 							<label htmlFor="exampleInputPassword">Contraseña</label>
-							<input type="password" className="form-control" value={formValues.userPassword} id="exampleInputPassword"
+							<input type="password" className="form-control" name="userPassword"
+							       value={formValues.userPassword} id="exampleInputPassword"
 							       onChange={handleChange} data-testid="userPass"/>
 						</div>
 					</InputContainer>
 					<ButtonContainer>
-						<button type="submit" className="btn btn-primary" onSubmit={handleSubmit}>Iniciar Sesión</button>
+						<button type="submit" className="btn btn-primary">Iniciar Sesión</button>
 					</ButtonContainer>
 				</form>
 			</FormContainer>
